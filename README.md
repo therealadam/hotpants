@@ -11,9 +11,14 @@ Here's an example model:
 
       value :something, :with => :calculate_something
       index :username
-      lock :something
     end
 
 Counters are atomically modified values in memcached. Value are simple values you want to store in memcached. An index is a lookup table for the named attribute of the host model. A lock is a semaphore maintained by memcached. 
 
 Hotpants is heavily influenced by redis-objects and several chats with John Nunemaker and Jesse Newland. 
+
+## TODO
+
+- Implement lists? (using prepend/append)
+- Implement locks?
+- Should it be possible to clear an entire index? Efficiently?
