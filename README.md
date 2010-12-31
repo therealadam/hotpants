@@ -8,7 +8,8 @@ Here's an example model:
       include Hotpants
       
       counter :friends
-      value :something
+
+      value :something, :with => :calculate_something
       index :username
       lock :something
     end

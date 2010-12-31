@@ -2,18 +2,16 @@ require "helper"
 
 describe Hotpants::Counter do
 
-  subject { Hotpants::Counter.new("counter_spec", memcache) }
+  subject { Hotpants::Counter.new("counter_spec", memcached) }
 
   it "is initialized with a memcached connection" do
-    connection = memcache
+    connection = memcached
     counter = Hotpants::Counter.new("some_key", connection)
     counter.connection.should == connection
   end
 
   it "has a key" do
-    connection = memcache
-    counter = Hotpants::Counter.new("counter_spec", connection)
-    counter.key.should == "counter_spec"
+    subject.key.should == "counter_spec"
   end
 
   it "has a cached value" do
@@ -44,10 +42,6 @@ describe Hotpants::Counter do
 
     subject.decr(10)
     subject.value.should == 3
-  end
-
-  def memcache
-    Memcached.new("localhost:11211")
   end
 
 end
