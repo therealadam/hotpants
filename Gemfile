@@ -1,4 +1,9 @@
 source "http://rubygems.org"
-
-# Specify your gem's dependencies in hotpants.gemspec
 gemspec
+
+group(:examples) do
+  gem "activerecord"
+  gem "sqlite3-ruby"
+  gem "ffaker"
+end
+
