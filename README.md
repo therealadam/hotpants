@@ -19,6 +19,8 @@ Hotpants is heavily influenced by redis-objects and several chats with John Nune
 
 ## TODO
 
+Note: this is a spike on ideas I've been toying with. It is rated _not-production-ready_, _somewhat-practical_ by MPAA.
+
 - Implement lists? (using prepend/append)
 - Implement locks?
 - Should it be possible to clear an entire index? Efficiently?
